@@ -1,14 +1,14 @@
-// base elements units
+//注释下方代码将生成亮色主题。
 
-//@darkmode: ;
-@darkmode: true;
+// @darkmode: true;
 
 :root {
     --text-color: @colorText;
     --bg-color: @bgcolorBody;
     --item-hover-bg-color: @bgcolorSelect;
     --active-file-bg-color: @bgcolorSelect;
-
+    --select-text-bg-color: @bgcolorSelectText;
+    --select-text-font-color: @colorSelectText;
 }
 
 @font-face {
@@ -20,21 +20,21 @@
 }
 
 @font-face {
-    font-family: 'Bellotas';
+    font-family: 'Bellota';
     src: url('./fonts/Bellota-Regular.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Bellotas';
+    font-family: 'Bellota';
     src: url('./fonts/Bellota-Italic.woff2') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Bellotas';
+    font-family: 'Bellota';
     src: url('./fonts/Bellota-Bold.woff2') format('woff');
     font-weight: bold;
     font-style: normal;
@@ -70,34 +70,34 @@
 }
 
 @font-face {
-    font-family: 'Old StandardTT';
+    font-family: 'Old Standard TT';
     src: url('./fonts/OldStandard-Bold.woff2') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
-@fontTitle: "Old StandardTT", "FZJZFS", serif;
-@fontText: "Bellotas", "HYHuaGuan", sans-serif;
-@fontEmphise: "Bellotas", "KhaiTi", sans-serif;
-@fontCode: "JosefinSlab", "HYHuaGuan", monospace;
+@fontTitle: "Old Standard TT", Didot, "Modern No. 20", "FZJuZXFK--GBK1-0", "FZJZFS", "STBaoliSC-Regular", "华文隶书", serif;
+@fontText: "Bellota", "Tw Cen MT", "HYHuaGuan", "STLibianSC-Regular", "华文中宋", sans-serif;
+@fontEmphise: "Bellota", "Tw Cen MT", "KhaiTi", STKaiti, Kaiti, sans-serif;
+@fontCode: "JosefinSlab", "Courier New", "HYHuaGuan", "STLibianSC-Regular", "华文中宋", monospace;
 
 @sizeTitle: 1.25rem;
 @sizeText: 1rem;
 
 @colorTitle: if(isdefined(@darkmode), #FDFEFD, #351D35);
 @colorText: if(isdefined(@darkmode), #f0eafb, #0F1A3A);
-@colorEmphise: #3453b2;
+@colorEmphise: if(isdefined(@darkmode), #C0C478, #3453b2);
 @colorComments: if(isdefined(@darkmode), #050507, #FDFEFD);
-@colorWeak: #050507;
+@colorWeak: if(isdefined(@darkmode), #050507, #0505071a);
 @colorLink: #C09A21;
 @colorCode: #FDFEFD;
+
 @bgcolorBase: if(isdefined(@darkmode), #221d35, linear-gradient(145deg, #fff 0%, #F9FCFF 5%, #f2f2f3 35%, #f0eafb 75%, #e0e3e6));
 @bgcolorBody: if(isdefined(@darkmode), #0F1A3A, #F9FCFF);
 @bgcolorQuota: if(isdefined(@darkmode), linear-gradient(225deg, #101c3e, #0e1734), linear-gradient(225deg, #d5d4d0, #fefbf7));
 @bgcolorCode: linear-gradient(225deg, #101c3e, #0e1734);
 @bgcolorTable: if(isdefined(@darkmode), linear-gradient(225deg, #0e2b41, #11334d), linear-gradient(315deg, #d8d3e2, #fffaff));
 @bgcolorSelect: if(isdefined(@darkmode), #1A3B68, #EEE6CF);
-
 
 @bchoverQuota: if(isdefined(@darkmode), #101c3e, #F3F3F3);
 @bchoverTable: if(isdefined(@darkmode), #103048, #f0eafb);
@@ -151,7 +151,7 @@
 @shadowbgFocusD: @bcshadowBaseD;
 @shadowbgFocus: if(isdefined(@darkmode), @shadowbgFocusD, @shadowbgFocusL);
 @shadowFocusL: inset -5px 5px 10px #c2c2c2, inset 5px -5px 10px #ffffff;
-@shadowFocusD:   inset 10px 10px 20px #1a1628,  inset -10px -10px 20px #1c172f;
+@shadowFocusD: inset 10px 10px 20px #1a1628, inset -10px -10px 20px #1c172f;
 @shadowFocus: if(isdefined(@darkmode), @shadowFocusD, @shadowFocusL);
 @shadowFocusbgL: #F3F3F3;
 @shadowFocusbgD: @bgcolorBody;
@@ -166,6 +166,29 @@
 @bgcolorBTNL: #fff;
 @bgcolorBTND: #082038;
 @bgcolorBTN: if(isdefined(@darkmode), @bgcolorBTND, @bgcolorBTNL);
+@bchoverBTNL: #FAE1A7;
+@bchoverBTND: #082038;
+@bchoverBTN: if(isdefined(@darkmode), @bchoverBTND, @bchoverBTNL);
+
+@bgcolorSelectText: if(isdefined(@darkmode), #FAE1A7, #084E6A);
+@colorSelectText: if(isdefined(@darkmode), #4D85DB, #FCF1E5);
+@bgcolorTOC: if(isdefined(@darkmode), #FFA644, #FFF6E5);
+
+
+@bgcolorTodoL: linear-gradient(145deg, #cacaca, #f0f0f0);
+@bgcolorTodoD: linear-gradient(145deg, #14293d, #051423);
+@bgcolorTodo: if(isdefined(@darkmode), @bgcolorTodoD, @bgcolorTodoL);
+@shadowTodoL: 5px 5px 14px #bcbcbc, -5px -5px 14px #ffffff;
+@shadowTodoD: 5px 5px 10px #0f2d41, -5px -5px 10px #0a1e32;
+@shadowTodo: if(isdefined(@darkmode), @shadowTodoD, @shadowTodoL);
+
+@bchoverTodoL: #2e4e7e;
+@bchoverTodoD: #0F1A3A;
+@bchoverTodo: if(isdefined(@darkmode), @bchoverTodoD, @bchoverTodoL);
+@shadowhoverTodoL: inset 5px 5px 5px #0a141e, inset -5px -5px 5px #4b78b4;
+@shadowhoverTodoD: inset 5px 5px 5px #0a1126, inset -10px -10px 5px #14234e;
+@shadowhoverTodo: if(isdefined(@darkmode), @shadowhoverTodoD, @shadowhoverTodoL);
+
 
 html,
 body,
@@ -183,7 +206,7 @@ body {
 
     @media (max-width:800px) {
         #write {
-            margin: 0;
+            margin: 0 auto;
             padding: 2rem;
             box-shadow: none;
         }
@@ -513,6 +536,7 @@ body {
             border-radius: 5px;
             background: @bgcolorCode;
             color: @colorCode;
+            font-size: .85rem;
         }
 
         pre.md-fences {
@@ -525,7 +549,6 @@ body {
             }
 
             pre {
-                font-size: 18px;
                 font-weight: bold;
             }
 
@@ -645,6 +668,42 @@ body {
             }
         }
 
+        input[type="checkbox"] {
+
+            &::before {
+                border-radius: 15px;
+                background: @bgcolorTodo;
+                box-shadow: @shadowTodo;
+                content: " ";
+                width: 25px;
+                height: 15px;
+                display: block;
+                position: absolute;
+                top: -2px;
+                left: -10px;
+            }
+        }
+
+        .task-list-done {
+            opacity: 0.5;
+            text-decoration: line-through;
+            transition: all .5s ease-in-out;
+
+            input[type="checkbox"] {
+
+                &::before {
+                    background: @bchoverTodo;
+                    box-shadow: @shadowhoverTodo;
+                    transition: all .5s ease-in-out;
+                }
+            }
+        }
+
+
+        .md-task-list-item>input {
+            top: 5px;
+        }
+
         hr {
             border: 0;
             color: #d0d0d5;
@@ -662,6 +721,35 @@ body {
             margin: 3px auto;
             box-shadow: 1.25em -1.25em, -1.25em 1.25em;
         }
+
+        .footnote {
+            opacity: .5;
+        }
+    }
+}
+
+#typora-quick-open {
+    background-color: transparent;
+    box-shadow: 5px 10px 15px 10px rgb(0 0 0 / 47%);
+    border-top: 4px solid orange;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #efefef2d;
+        backdrop-filter: blur(15px);
+    }
+
+    .typora-quick-open-item:hover {
+        background-color: var(--active-file-bg-color);
+        border-color: var(--active-file-text-color);
+        color: var(--active-file-text-color);
     }
 }
 
@@ -689,6 +777,65 @@ body {
     }
 }
 
+
+#common-dialog {
+    .modal-dialog {
+        .modal-content {
+            border-top: 4px solid @colorLink;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .modal-footer {
+
+            .btn {
+                .megamenu-content.long-btn();
+            }
+
+            .btn-primary {
+                background-color: @colorText;
+                color: @bgcolorBody;
+
+                &:hover{
+                    color: @colorText;
+                }
+            }
+        }
+    }
+}
+
+#toc-dropmenu {
+    background: @bgcolorTOC;
+    border-radius: 10px;
+}
+
+.megamenu-menu {
+    background: @bgcolorQuota;
+    box-shadow: @shadowQuota;
+
+    .megamenu-menu-header {
+        #megamenu-menu-header-title {
+            color: @colorTitle ;
+        }
+    }
+
+    .megamenu-menu-list li {
+        width: 90%;
+        margin: 0 auto;
+
+        a{
+            color: @colorText;
+        }
+    }
+
+    .megamenu-menu-list li a.active,
+    .megamenu-menu-list:not(.saved) li a:hover {
+        color: @colorText;
+        border-radius: 25px;
+        background: @bchoverBTN;
+        box-shadow: @shadowhoverBTN;
+    }
+}
+
 .megamenu-content {
     background: @bgcolorBody;
 
@@ -702,13 +849,13 @@ body {
 
     .long-btn {
         margin: 15px 30px;
-        border: 1px solid transparent;
+        border: 0px solid transparent;
         border-radius: 45px;
         background: @bgcolorBTN;
         box-shadow: @shadowBTN;
 
         &:hover {
-            background: @bgcolorBTN;
+            background: @bchoverBTN;
             box-shadow: @shadowhoverBTN;
         }
     }
@@ -718,6 +865,7 @@ body {
 
         .theme-preview-div {
             width: 25%;
+            min-width: 250px;
             border-color: transparent;
             display: inline-flex;
             align-items: center;
@@ -743,25 +891,11 @@ body {
         }
 
         #about-content-license-button {
-            margin: 15px 30px;
-            border: 1px solid transparent;
-            border-radius: 45px;
-            background: @bgcolorBTN;
-            box-shadow: @shadowBTN;
-
-            &:hover {
-                background: @bgcolorBTN;
-                box-shadow: @shadowhoverBTN;
-            }
+            .megamenu-content.long-btn();
         }
     }
-
 }
 
-.megamenu-menu-list li a.active,
-.megamenu-menu-list:not(.saved) li a:hover {
-    color: @colorText;
-}
 
 @media (prefers-color-scheme: dark) {
 
@@ -772,7 +906,7 @@ body {
     }
 }
 
-.uni-preference-panel{
+.uni-preference-panel {
     @media (max-width:800px) {
         background-color: @bgcolorBase;
     }

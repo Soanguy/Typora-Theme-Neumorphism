@@ -1,10 +1,10 @@
 :root {
-  --text-color: #0F1A3A;
-  --bg-color: #F9FCFF;
-  --item-hover-bg-color: #EEE6CF;
-  --active-file-bg-color: #EEE6CF;
-  --select-text-bg-color: #084E6A;
-  --select-text-font-color: #FCF1E5;
+  --text-color: #f0eafb;
+  --bg-color: #0F1A3A;
+  --item-hover-bg-color: #1A3B68;
+  --active-file-bg-color: #1A3B68;
+  --select-text-bg-color: #FAE1A7;
+  --select-text-font-color: #4D85DB;
 }
 @font-face {
   font-family: 'FZJZFS';
@@ -67,10 +67,10 @@ body,
   font-size: 18px;
 }
 body {
-  background: #F9FCFF;
+  background: #0F1A3A;
 }
 body content {
-  background: #F9FCFF;
+  background: #0F1A3A;
 }
 @media (max-width: 800px) {
   body #write {
@@ -84,18 +84,18 @@ body content {
     margin: 2rem auto;
     padding: 2rem 4rem;
     border-radius: 15px;
-    box-shadow: 15px 15px 66px #a2a4a6, -15px -15px 66px #ffffff;
+    box-shadow: 10px 10px 20px #1a1628, -10px -10px 20px #1c172f;
   }
 }
 body #write {
   max-width: 40rem;
   min-width: 350px;
   line-height: 2;
-  background: linear-gradient(145deg, #fff 0%, #F9FCFF 5%, #f2f2f3 35%, #f0eafb 75%, #e0e3e6);
+  background: #221d35;
   font-family: "Bellota", "Tw Cen MT", "HYHuaGuan", "STLibianSC-Regular", "华文中宋", sans-serif;
   font-size: 18px;
   font-size: 1rem;
-  color: #0F1A3A;
+  color: #f0eafb;
   counter-reset: figures;
 }
 body #write h1,
@@ -106,7 +106,7 @@ body #write h5,
 body #write h6 {
   font-family: "Old Standard TT", Didot, "Modern No. 20", "FZJuZXFK--GBK1-0", "FZJZFS", "STBaoliSC-Regular", "华文隶书", serif;
   font-weight: bold;
-  color: #351D35;
+  color: #FDFEFD;
   z-index: 2;
 }
 body #write h1 {
@@ -175,7 +175,7 @@ body #write h3::after {
   left: 2rem;
   width: 75%;
   height: 2px;
-  background: #0F1A3A;
+  background: #f0eafb;
   content: '';
   opacity: 0.2;
   -webkit-transition: opacity 0.3s, height 0.3s;
@@ -289,14 +289,14 @@ body #write h2:hover::before,
 body #write h3:hover::before,
 body #write h4:hover::before,
 body #write h5:hover::before {
-  color: rgba(15, 26, 58, 0.3);
+  color: rgba(240, 234, 251, 0.3);
   z-index: -1;
 }
 body #write strong,
 body #write em {
   font-family: "Bellota", "Tw Cen MT", "KhaiTi", STKaiti, Kaiti, sans-serif;
   font-weight: 900;
-  color: #3453b2;
+  color: #C0C478;
 }
 body #write u {
   text-decoration: none;
@@ -319,7 +319,7 @@ body #write a {
   z-index: 2;
 }
 body #write a:hover {
-  color: #0F1A3A;
+  color: #f0eafb;
   transition: all ease-in-out 1s;
 }
 body #write a::after {
@@ -393,17 +393,17 @@ body #write table {
   width: 100%;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  background: linear-gradient(315deg, #d8d3e2, #fffaff);
-  box-shadow: -6px -6px 12px #d8d3e2, 6px 6px 12px #ffffff;
+  background: linear-gradient(225deg, #0e2b41, #11334d);
+  box-shadow: -6px -6px 12px #0d263a, 6px 6px 12px #133a56;
   border-collapse: separate;
 }
 body #write table:hover {
-  background: #f0eafb;
-  box-shadow: inset 9px -9px 25px #e4deee, inset -9px 9px 25px #fcf6ff;
+  background: #103048;
+  box-shadow: inset 9px -9px 25px #0d263a, inset -9px 9px 25px #133a56;
 }
 body #write table tr:hover,
 body #write table thead {
-  box-shadow: 2px 5px 10px 0px #e6950f, inset 0px 5px 20px 10px #ffb713;
+  box-shadow: 2px 5px 10px 0px #0e1734, inset 0px 5px 20px 10px #2d3966;
   border-radius: 20px;
 }
 body #write blockquote {
@@ -411,13 +411,13 @@ body #write blockquote {
   padding: 0.5rem 3rem 0.5rem 1rem;
   position: relative;
   border-radius: 5px;
-  background: linear-gradient(225deg, #d5d4d0, #fefbf7);
-  box-shadow: -5px 5px 10px #bebcb9, 5px -5px 10px #ffffff;
+  background: linear-gradient(225deg, #101c3e, #0e1734);
+  box-shadow: -5px 5px 10px #0a1024, 5px -5px 10px #121e44;
   font-family: "Bellota", "Tw Cen MT", "KhaiTi", STKaiti, Kaiti, sans-serif;
 }
 body #write blockquote:hover {
-  background: #F3F3F3;
-  box-shadow: inset -5px 5px 10px #c2c2c2, inset 5px -5px 10px #ffffff;
+  background: #101c3e;
+  box-shadow: inset -5px 5px 10px #0b142b, inset 5px -5px 10px #152451;
 }
 body #write blockquote::after,
 body #write blockquote::before {
@@ -428,15 +428,15 @@ body #write blockquote::before {
   right: -16px;
   bottom: -16px;
   border-radius: 50%;
-  background: linear-gradient(225deg, #fefbf7, #d5d4d0);
-  box-shadow: -5px 5px 10px #bebcb9bf, 5px -5px 10px #ffffff;
+  background: linear-gradient(225deg, #111e42, #0e1938);
+  box-shadow: -5px 5px 10px #0b142b, 5px -5px 10px #152451;
 }
 body #write blockquote::before {
   width: 2rem;
   height: 2rem;
   right: 25px;
-  background: linear-gradient(225deg, #ffffff, #dbdbdb);
-  box-shadow: -5px 5px 10px #c2c2c2, 5px -5px 10px #ffffff;
+  background: linear-gradient(225deg, #122047, #0f1b3b);
+  box-shadow: -5px 5px 10px #0c152e, 5px -5px 10px #162756;
 }
 body #write blockquote:hover::after,
 body #write blockquote:hover::before {
@@ -473,8 +473,8 @@ body #write figcaption:before {
 }
 body #write input[type="checkbox"]::before {
   border-radius: 15px;
-  background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow: 5px 5px 14px #bcbcbc, -5px -5px 14px #ffffff;
+  background: linear-gradient(145deg, #14293d, #051423);
+  box-shadow: 5px 5px 10px #0f2d41, -5px -5px 10px #0a1e32;
   content: " ";
   width: 25px;
   height: 15px;
@@ -489,8 +489,8 @@ body #write .task-list-done {
   transition: all 0.5s ease-in-out;
 }
 body #write .task-list-done input[type="checkbox"]::before {
-  background: #2e4e7e;
-  box-shadow: inset 5px 5px 5px #0a141e, inset -5px -5px 5px #4b78b4;
+  background: #0F1A3A;
+  box-shadow: inset 5px 5px 5px #0a1126, inset -10px -10px 5px #14234e;
   transition: all 0.5s ease-in-out;
 }
 body #write .md-task-list-item > input {
@@ -499,7 +499,7 @@ body #write .md-task-list-item > input {
 body #write hr {
   border: 0;
   color: #d0d0d5;
-  background: linear-gradient(to right, #C09A21, #FDFEFD) no-repeat center;
+  background: linear-gradient(to right, #C09A21, #050507) no-repeat center;
   background-size: 100% 2px;
 }
 body #write hr::before {
@@ -539,22 +539,22 @@ body #write .footnote {
 }
 #typora-sidebar {
   border-radius: 0px;
-  background: linear-gradient(145deg, #ffffff, #dadadb);
-  box-shadow: 16px 16px 32px #a9a9aa, -16px -16px 32px #ffffff;
+  background: #221d35;
+  box-shadow: 10px 10px 20px #1a1628, -10px -10px 20px #1c172f;
 }
 #typora-sidebar .file-list-item {
-  border-bottom-color: #0505071a;
+  border-bottom-color: #050507;
 }
 #typora-sidebar .file-list-item.active {
   border-radius: 10px;
-  background: linear-gradient(145deg, #fff 0%, #F9FCFF 5%, #f2f2f3 35%, #f0eafb 75%, #e0e3e6);
-  box-shadow: inset -10px 10px 70px #bdbdbe, inset 10px -10px 70px #ffffff;
+  background: #221d35;
+  box-shadow: inset -5px 5px 10px #0b142b, inset 5px -5px 10px #152451;
 }
 #typora-sidebar .file-node-content {
-  color: #0F1A3A;
+  color: #f0eafb;
 }
 #typora-sidebar .file-tree-node.active > .file-node-content {
-  color: #351D35;
+  color: #FDFEFD;
 }
 #common-dialog .modal-dialog .modal-content {
   border-top: 4px solid #C09A21;
@@ -564,66 +564,66 @@ body #write .footnote {
   margin: 15px 30px;
   border: 0px solid transparent;
   border-radius: 45px;
-  background: #fff;
-  box-shadow: 6px 6px 10px #e4e4e4, -6px -6px 10px #ffffff;
+  background: #082038;
+  box-shadow: 8px 8px 12px #071C31, -8px -8px 12px #09243F;
 }
 #common-dialog .modal-dialog .modal-footer .btn:hover {
-  background: #FAE1A7;
-  box-shadow: inset 6px 6px 10px #d5ceb9, inset -6px -6px 10px #fffee5;
+  background: #082038;
+  box-shadow: inset 8px 8px 12px #071C31, inset -8px -8px 12px #09243F;
 }
 #common-dialog .modal-dialog .modal-footer .btn-primary {
-  background-color: #0F1A3A;
-  color: #F9FCFF;
-}
-#common-dialog .modal-dialog .modal-footer .btn-primary:hover {
+  background-color: #f0eafb;
   color: #0F1A3A;
 }
+#common-dialog .modal-dialog .modal-footer .btn-primary:hover {
+  color: #f0eafb;
+}
 #toc-dropmenu {
-  background: #FFF6E5;
+  background: #FFA644;
   border-radius: 10px;
 }
 .megamenu-menu {
-  background: linear-gradient(225deg, #d5d4d0, #fefbf7);
-  box-shadow: -5px 5px 10px #bebcb9, 5px -5px 10px #ffffff;
+  background: linear-gradient(225deg, #101c3e, #0e1734);
+  box-shadow: -5px 5px 10px #0a1024, 5px -5px 10px #121e44;
 }
 .megamenu-menu .megamenu-menu-header #megamenu-menu-header-title {
-  color: #351D35;
+  color: #FDFEFD;
 }
 .megamenu-menu .megamenu-menu-list li {
   width: 90%;
   margin: 0 auto;
 }
 .megamenu-menu .megamenu-menu-list li a {
-  color: #0F1A3A;
+  color: #f0eafb;
 }
 .megamenu-menu .megamenu-menu-list li a.active,
 .megamenu-menu .megamenu-menu-list:not(.saved) li a:hover {
-  color: #0F1A3A;
+  color: #f0eafb;
   border-radius: 25px;
-  background: #FAE1A7;
-  box-shadow: inset 6px 6px 10px #d5ceb9, inset -6px -6px 10px #fffee5;
+  background: #082038;
+  box-shadow: inset 8px 8px 12px #071C31, inset -8px -8px 12px #09243F;
 }
 .megamenu-content {
-  background: #F9FCFF;
+  background: #0F1A3A;
 }
 @media (max-width: 800px) {
   .megamenu-content {
-    background-color: linear-gradient(145deg, #fff 0%, #F9FCFF 5%, #f2f2f3 35%, #f0eafb 75%, #e0e3e6);
+    background-color: #221d35;
   }
 }
 .megamenu-content #recent-file-panel tbody tr:nth-child(2n-1) {
-  background-color: linear-gradient(145deg, #fff 0%, #F9FCFF 5%, #f2f2f3 35%, #f0eafb 75%, #e0e3e6);
+  background-color: #221d35;
 }
 .megamenu-content .long-btn {
   margin: 15px 30px;
   border: 0px solid transparent;
   border-radius: 45px;
-  background: #fff;
-  box-shadow: 6px 6px 10px #e4e4e4, -6px -6px 10px #ffffff;
+  background: #082038;
+  box-shadow: 8px 8px 12px #071C31, -8px -8px 12px #09243F;
 }
 .megamenu-content .long-btn:hover {
-  background: #FAE1A7;
-  box-shadow: inset 6px 6px 10px #d5ceb9, inset -6px -6px 10px #fffee5;
+  background: #082038;
+  box-shadow: inset 8px 8px 12px #071C31, inset -8px -8px 12px #09243F;
 }
 .megamenu-content #theme-preview-grid {
   max-width: 95%;
@@ -635,11 +635,11 @@ body #write .footnote {
   display: inline-flex;
   align-items: center;
   align-content: center;
-  box-shadow: 6px 6px 10px #e4e4e4, -6px -6px 10px #ffffff;
+  box-shadow: 8px 8px 12px #071C31, -8px -8px 12px #09243F;
 }
 .megamenu-content #theme-preview-grid .theme-preview-div:hover {
-  border-color: #EEE6CF;
-  box-shadow: inset 6px 6px 10px #d5ceb9, inset -6px -6px 10px #fffee5;
+  border-color: #1A3B68;
+  box-shadow: inset 8px 8px 12px #071C31, inset -8px -8px 12px #09243F;
 }
 .megamenu-content #theme-preview-grid .theme-preview-div .theme-preview-content {
   width: 90%;
@@ -653,23 +653,23 @@ body #write .footnote {
   margin: 15px 30px;
   border: 0px solid transparent;
   border-radius: 45px;
-  background: #fff;
-  box-shadow: 6px 6px 10px #e4e4e4, -6px -6px 10px #ffffff;
+  background: #082038;
+  box-shadow: 8px 8px 12px #071C31, -8px -8px 12px #09243F;
 }
 .megamenu-content #about-content-about-section #about-content-license-button:hover {
-  background: #FAE1A7;
-  box-shadow: inset 6px 6px 10px #d5ceb9, inset -6px -6px 10px #fffee5;
+  background: #082038;
+  box-shadow: inset 8px 8px 12px #071C31, inset -8px -8px 12px #09243F;
 }
 @media (prefers-color-scheme: dark) {
   .export-detail,
   .export-item.active,
   .export-items-list-control {
-    background-color: #EEE6CF;
+    background-color: #1A3B68;
   }
 }
 @media (max-width: 800px) {
   .uni-preference-panel {
-    background-color: linear-gradient(145deg, #fff 0%, #F9FCFF 5%, #f2f2f3 35%, #f0eafb 75%, #e0e3e6);
+    background-color: #221d35;
   }
 }
 #top-titlebar {
@@ -677,23 +677,23 @@ body #write .footnote {
 }
 #top-titlebar,
 #top-titlebar * {
-  background-color: #F9FCFF;
+  background-color: #0F1A3A;
 }
 @media (max-width: 800px) {
   #top-titlebar,
   #top-titlebar * {
-    background-color: linear-gradient(145deg, #fff 0%, #F9FCFF 5%, #f2f2f3 35%, #f0eafb 75%, #e0e3e6);
+    background-color: #221d35;
   }
 }
 .on-focus-mode #write {
   border-radius: 10px;
-  box-shadow: -15px 15px 15px #ebebec, 15px -15px 15px #f9f9fa;
+  box-shadow: 10px 10px 20px #1a1628, -10px -10px 20px #1c172f;
 }
 .on-focus-mode .md-focus {
   padding: 2px 8px;
   border-radius: 5px;
-  background: #F3F3F3;
-  box-shadow: inset -5px 5px 10px #c2c2c2, inset 5px -5px 10px #ffffff;
+  background: #0F1A3A;
+  box-shadow: inset 10px 10px 20px #1a1628, inset -10px -10px 20px #1c172f;
 }
 pre.md-fences .cm-s-inner .cm-variable,
 pre.md-fences .cm-s-inner .cm-operator,
