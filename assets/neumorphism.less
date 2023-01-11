@@ -1116,6 +1116,22 @@ body {
             }
         }
     }
+
+
+    .outline-item.outline-item-active::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: @colorLink;
+        border-radius: 15px;
+        top: 0;
+        right: .5rem;
+        margin: 12px auto;
+        animation-duration: .5s;
+        animation-name: circledown;
+    }
 }
 
 .ty-show-outline-filter #ty-sidebar-search-tabs,
@@ -1635,6 +1651,33 @@ pre.md-fences {
         width: 100%;
         left: 0px;
         padding-left: 0;
+    }
+}
+
+
+@keyframes circledown {
+    0% {
+        border-radius: 15px;
+    }
+
+    5% {
+        border-radius: 2px;
+        height: 10px;
+    }
+
+    20% {
+        border-radius: 0px;
+        height: 15px;
+    }
+
+    25% {
+        border-radius: 2px;
+        height: 15px;
+    }
+
+    100% {
+        border-radius: 15px;
+        height: 8px;
     }
 }
 
