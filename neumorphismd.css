@@ -801,6 +801,20 @@ body #write .footnote {
   left: 1rem;
   border-radius: 15px;
 }
+#typora-sidebar .outline-item.outline-item-active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #C09A21;
+  border-radius: 15px;
+  top: 0;
+  right: 0.5rem;
+  margin: 12px auto;
+  animation-duration: 0.5s;
+  animation-name: circledown;
+}
 .ty-show-outline-filter #ty-sidebar-search-tabs,
 .ty-show-search #ty-sidebar-search-tabs {
   align-items: center;
@@ -1233,6 +1247,27 @@ pre.md-fences .CodeMirror-gutters {
     width: 100%;
     left: 0px;
     padding-left: 0;
+  }
+}
+@keyframes circledown {
+  0% {
+    border-radius: 15px;
+  }
+  5% {
+    border-radius: 2px;
+    height: 10px;
+  }
+  20% {
+    border-radius: 0px;
+    height: 15px;
+  }
+  25% {
+    border-radius: 2px;
+    height: 15px;
+  }
+  100% {
+    border-radius: 15px;
+    height: 8px;
   }
 }
 #ty-suppress-mode-warning-input::before {
