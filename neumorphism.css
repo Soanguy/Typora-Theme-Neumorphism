@@ -149,7 +149,7 @@ body #write {
   min-width: 400px;
   line-height: 2;
   background: linear-gradient(145deg, #fff 0%, #F9FCFF 5%, #f2f2f3 35%, #f0eafb 75%, #e0e3e6);
-  font-family: "Bellota", "Tw Cen MT", "HYHuaGuan", "STLibianSC-Regular", "华文中宋", sans-serif;
+  font-family: "Bellota", "Tw Cen MT", "HYHuaGuan", "霞鹜文楷", "STLibianSC-Regular", "华文中宋", sans-serif;
   font-size: 18px;
   font-size: 1rem;
   color: #0F1A3A;
@@ -295,6 +295,26 @@ body #write h5 {
   position: relative;
   font-size: 1.25rem;
 }
+body #write h6 {
+  position: relative;
+  padding-left: 2rem;
+}
+body #write h6::before {
+  position: absolute;
+  top: 8px;
+  left: 0.5rem;
+  color: #F9FCFF;
+  background: #0F1A3A;
+  content: '\36';
+  border-radius: 15px;
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+  text-align: center;
+  line-height: 1;
+  display: inline-block;
+  font-family: 'FontAwesome';
+}
 body #write h1 {
   counter-reset: cnt_h2 0 cnt_h3 0 cnt_h4 0 cnt_h5 0;
 }
@@ -420,7 +440,7 @@ body #write pre.md-meta-block,
 body #write code {
   border-radius: 5px;
   background: linear-gradient(225deg, #101c3e, #0e1734);
-  color: #FDFEFD;
+  color: #e6dcff;
   font-size: 0.85rem;
 }
 body #write pre.md-fences {
@@ -432,9 +452,6 @@ body #write pre.md-fences:hover {
 }
 body #write pre.md-fences .CodeMirror-code {
   line-height: 1.25;
-}
-body #write pre.md-fences div.CodeMirror-cursor {
-  border-width: 2px;
 }
 body #write pre.md-meta-block {
   padding: 4px 12px;
@@ -475,8 +492,8 @@ body #write .md-diagram-panel:before {
 }
 body #write .md-diagram-panel svg {
   width: 100% !important;
-  background: linear-gradient(1deg, #d5d4d0, #fefbf7);
-  box-shadow: -5px 5px 10px #bebcb9, 5px -5px 10px #ffffff;
+  background: linear-gradient(12deg, #ededfc, #efeffb 45%, #f7f6ff);
+  box-shadow: -5px 5px 10px #e6e6e6, 5px -5px 10px #f0f0f0;
   padding: 1rem;
 }
 body #write .md-diagram-panel svg:hover {
@@ -509,8 +526,8 @@ body #write blockquote {
   padding: 0.5rem 3rem 0.5rem 1rem;
   position: relative;
   border-radius: 5px;
-  background: linear-gradient(1deg, #d5d4d0, #fefbf7);
-  box-shadow: -5px 5px 10px #bebcb9, 5px -5px 10px #ffffff;
+  background: linear-gradient(12deg, #ededfc, #efeffb 45%, #f7f6ff);
+  box-shadow: -5px 5px 10px #e6e6e6, 5px -5px 10px #f0f0f0;
   font-family: "Old Standard TT", Didot, "Modern No. 20", "KhaiTi", STKaiti, Kaiti, sans-serif;
   transition: all 0.5s ease-in-out;
 }
@@ -543,6 +560,11 @@ body #write blockquote:hover::before {
   background: linear-gradient(225deg, #cedaff, #2f4ba0);
   box-shadow: -5px 5px 10px #5079fb, 5px -5px 10px #ccd9ff;
 }
+body #write blockquote h6::before {
+  content: "\f1d8";
+  width: 25px;
+  height: 25px;
+}
 body #write blockquote blockquote {
   border-left: 4px solid orange;
   background: transparent;
@@ -566,7 +588,7 @@ body #write .md-image {
   height: fit-content;
   counter-increment: figures;
   background: #F9FCFF;
-  box-shadow: -5px 5px 10px #bebcb9, 5px -5px 10px #ffffff;
+  box-shadow: -5px 5px 10px #e6e6e6, 5px -5px 10px #f0f0f0;
 }
 body #write .md-image:before {
   content: 'Fig. ' counter(figures);
@@ -592,7 +614,7 @@ body #write a img {
 }
 body #write img {
   display: block;
-  box-shadow: -5px 5px 10px #bebcb9, 5px -5px 10px #ffffff;
+  box-shadow: -5px 5px 10px #e6e6e6, 5px -5px 10px #f0f0f0;
 }
 body #write img[alt~="shadow"] {
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
@@ -601,6 +623,174 @@ body #write img[alt~="inline"] {
   display: inline-block;
   margin: 0;
   padding: 0;
+}
+body #write img[alt~="0"] {
+  width: 0%;
+  height: 0%;
+}
+body #write img[alt~="5"] {
+  width: 5%;
+  height: 5%;
+}
+body #write img[alt~="10"] {
+  width: 10%;
+  height: 10%;
+}
+body #write img[alt~="15"] {
+  width: 15%;
+  height: 15%;
+}
+body #write img[alt~="20"] {
+  width: 20%;
+  height: 20%;
+}
+body #write img[alt~="25"] {
+  width: 25%;
+  height: 25%;
+}
+body #write img[alt~="30"] {
+  width: 30%;
+  height: 30%;
+}
+body #write img[alt~="35"] {
+  width: 35%;
+  height: 35%;
+}
+body #write img[alt~="40"] {
+  width: 40%;
+  height: 40%;
+}
+body #write img[alt~="45"] {
+  width: 45%;
+  height: 45%;
+}
+body #write img[alt~="50"] {
+  width: 50%;
+  height: 50%;
+}
+body #write img[alt~="55"] {
+  width: 55%;
+  height: 55%;
+}
+body #write img[alt~="60"] {
+  width: 60%;
+  height: 60%;
+}
+body #write img[alt~="65"] {
+  width: 65%;
+  height: 65%;
+}
+body #write img[alt~="70"] {
+  width: 70%;
+  height: 70%;
+}
+body #write img[alt~="75"] {
+  width: 75%;
+  height: 75%;
+}
+body #write img[alt~="80"] {
+  width: 80%;
+  height: 80%;
+}
+body #write img[alt~="85"] {
+  width: 85%;
+  height: 85%;
+}
+body #write img[alt~="90"] {
+  width: 90%;
+  height: 90%;
+}
+body #write img[alt~="95"] {
+  width: 95%;
+  height: 95%;
+}
+body #write img[alt~="100"] {
+  width: 100%;
+  height: 100%;
+}
+body #write img[title~="0"] {
+  width: 0%;
+  height: 0%;
+}
+body #write img[title~="5"] {
+  width: 5%;
+  height: 5%;
+}
+body #write img[title~="10"] {
+  width: 10%;
+  height: 10%;
+}
+body #write img[title~="15"] {
+  width: 15%;
+  height: 15%;
+}
+body #write img[title~="20"] {
+  width: 20%;
+  height: 20%;
+}
+body #write img[title~="25"] {
+  width: 25%;
+  height: 25%;
+}
+body #write img[title~="30"] {
+  width: 30%;
+  height: 30%;
+}
+body #write img[title~="35"] {
+  width: 35%;
+  height: 35%;
+}
+body #write img[title~="40"] {
+  width: 40%;
+  height: 40%;
+}
+body #write img[title~="45"] {
+  width: 45%;
+  height: 45%;
+}
+body #write img[title~="50"] {
+  width: 50%;
+  height: 50%;
+}
+body #write img[title~="55"] {
+  width: 55%;
+  height: 55%;
+}
+body #write img[title~="60"] {
+  width: 60%;
+  height: 60%;
+}
+body #write img[title~="65"] {
+  width: 65%;
+  height: 65%;
+}
+body #write img[title~="70"] {
+  width: 70%;
+  height: 70%;
+}
+body #write img[title~="75"] {
+  width: 75%;
+  height: 75%;
+}
+body #write img[title~="80"] {
+  width: 80%;
+  height: 80%;
+}
+body #write img[title~="85"] {
+  width: 85%;
+  height: 85%;
+}
+body #write img[title~="90"] {
+  width: 90%;
+  height: 90%;
+}
+body #write img[title~="95"] {
+  width: 95%;
+  height: 95%;
+}
+body #write img[title~="100"] {
+  width: 100%;
+  height: 100%;
 }
 body #write figcaption {
   font-weight: 700;
@@ -851,8 +1041,8 @@ body #write .footnote {
   border-radius: 10px;
 }
 .megamenu-menu {
-  background: linear-gradient(1deg, #d5d4d0, #fefbf7);
-  box-shadow: -5px 5px 10px #bebcb9, 5px -5px 10px #ffffff;
+  background: linear-gradient(12deg, #ededfc, #efeffb 45%, #f7f6ff);
+  box-shadow: -5px 5px 10px #e6e6e6, 5px -5px 10px #f0f0f0;
 }
 .megamenu-menu #megamenu-back-btn {
   color: #0F1A3A;
@@ -1098,10 +1288,6 @@ pre.md-fences .cm-s-inner .cm-tag {
 pre.md-fences .cm-s-inner .cm-attribute {
   color: #7575E4;
 }
-pre.md-fences .CodeMirror div.CodeMirror-cursor {
-  border-left: 1px solid #b8bfc6;
-  z-index: 3;
-}
 pre.md-fences .cm-s-inner .cm-string {
   color: #D26B6B;
 }
@@ -1272,4 +1458,63 @@ pre.md-fences .CodeMirror-gutters {
 }
 #ty-suppress-mode-warning-input::before {
   display: none;
+}
+#cursor {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background: indigo;
+  border-radius: 8px;
+  opacity: 0.5;
+  scale: 1.5;
+  z-index: 10086;
+  pointer-events: none;
+  transition: 0.2s ease-in-out;
+  transition-property: background, opacity, transform;
+}
+#cursor.hidden {
+  opacity: 0;
+}
+#cursor.hover {
+  opacity: 0.25;
+  transform: scale(2.5);
+}
+#cursor.active {
+  opacity: 0.8;
+  transform: scale(0.5);
+}
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 2px solid #C09A21;
+}
+var {
+  padding: 6px 20px;
+  position: relative;
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #25c33b;
+  background: linear-gradient(230deg, #ffaa0d, #deb455);
+  text-shadow: 0 -1px #c1c0d4;
+  -webkit-box-shadow: 0 3px 5px #d3d2de;
+  box-shadow: 1 3px 5px #d5d4de;
+  font-style: normal;
+}
+var::before {
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  line-height: 24.5px;
+  left: -12px;
+  top: -12px;
+  -webkit-box-shadow: 0 0 0 2.5px #f7f8f9;
+  box-shadow: 0 0 0 2.5px #f7f8f9;
+  font-weight: 600;
+  font-family: "FontAwesome";
+  text-align: center;
+  background: linear-gradient(560deg, #f9ae07, #ffb615);
+  content: "\f0f3";
+  text-shadow: 0 -1px #ffb81b;
 }

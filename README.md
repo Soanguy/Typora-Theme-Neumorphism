@@ -8,16 +8,50 @@ description: this block is YAML front matters
 
 - 新拟态风格。
 - 包含字体文件（中文字体禁止用于商业，英文字体为开源字体）
-- 仅包含基本 Markdown 功能，并未使用技巧来增强 Markdown。例如：无法通过为图片添加属性来调整图片样式。后期可能会视情况添加更多的技巧来增强相关功能。
+- 仅包含基本 Markdown 功能，并未使用技巧来增强 Markdown。后期可能会视情况添加更多的技巧来增强相关功能。
 - 默认提供 亮暗 两种模式。
 - 并未针对 PDF 导出做配适性优化。
 - 本主题的 CSS 文件由 Less 文件导出。
 
-![](assets/READMEL.png)
+# 技巧
 
-![](assets/READMED.png)
+请注意，以下所列明的技巧或者是依赖于特定的 css 文件，或者是依赖于特定的 js 文件。一些技巧可能只能在特定主题中使用，在进行迁移文档时，需要注意可能在其他软件上无法使用或者展示。
+
+## 修改鼠标样式
+
+本技巧来源于[用原生 JS 写一款乖巧的鼠标指针特效](https://zhuanlan.zhihu.com/p/351951477)。
+
+具体操作需要修改程序本体，在程序升级之后，需要重新进行设计。
+
+1. 为 typora 注入 js 文件：
+   - 复制 `cursor.js`内的代码
+   - 粘贴到 typora 的 `index.html` 文件代码中`</body>`之前（可以直接检索）
+     - 在 macOS 中，该文件位于 `/Applications/Typora.app/Contents/Resources/TypeMark/index.html`
+     - 在 Windows 中，该文件位于`C:\Program Files\Typora\resources\window.html`
+1. 重启软件即可
+
+## 图片的技巧
+
+1. 快速调节照片大小：将下方的任意一个位置的数字调整为自己想要缩放的大小即可。
+
+    <center><var>方法： <code>![照片名称 数字](照片地址 "数字")</code> </var></center> 
+
+    <center><var>例如：调整为50%大小<code>![照片名称 50](照片地址 "50")</code> </var></center> 
+
+    > 注意：默认设定的缩放大小以5为步值，即：0，5，10，15……
+
+1. 需要注意的是无法调整照片为行内元素。
+
+## HTML 元素引入
+
+1. 可以通过 `<var> </var>`元素来引入下面的样式：
+   - <var> 该元素的本来语义是定义变量。</var> 
 
 
+
+
+
+# 排版示例
 
 In [publishing](https://www.wikiwand.com/en/Publishing) and [graphic design](https://www.wikiwand.com/en/Graphic_design), **lorem ipsum** (derived from Latin *dolorem ipsum*, translated as "pain itself") is a [filler text](https://www.wikiwand.com/en/Filler_text) commonly used to demonstrate the graphic elements of a document or visual presentation. [^1]
 
@@ -55,7 +89,7 @@ Block level contains:
 2. ordered list item 2.
    + sub-unordered list item 1.
    + sub-unordered list item 2.
-     + [x] something is DONE.
+     + [ ] something is DONE.
      + [ ] something is not TODO.
 
 ```html

@@ -142,7 +142,7 @@
 }
 
 @fontTitle: "Old Standard TT", Didot, "Modern No. 20", "FZJuZXFK--GBK1-0", "FZJZFS", "STBaoliSC-Regular", "华文隶书", serif;
-@fontText: "Bellota", "Tw Cen MT", "HYHuaGuan", "STLibianSC-Regular", "华文中宋", sans-serif;
+@fontText: "Bellota", "Tw Cen MT", "HYHuaGuan", "霞鹜文楷", "STLibianSC-Regular", "华文中宋", sans-serif;
 @fontEmphise: "Old Standard TT", Didot, "Modern No. 20", "KhaiTi", STKaiti, Kaiti, sans-serif;
 @fontCode: "Anonymous", "Courier New", "HYHuaGuan", "STLibianSC-Regular", "华文中宋", monospace;
 @fontSource: "Fira Code", "menlo", "KhaiTi", STKaiti, Kaiti, monospace;
@@ -156,11 +156,11 @@
 @colorComments: if(isdefined(@darkmode), #050507, #FDFEFD);
 @colorWeak: if(isdefined(@darkmode), #050507, #0505071a);
 @colorLink: #C09A21;
-@colorCode: #FDFEFD;
+@colorCode: #e6dcff;
 
 @bgcolorBase: if(isdefined(@darkmode), #171736, linear-gradient(145deg, #fff 0%, #F9FCFF 5%, #f2f2f3 35%, #f0eafb 75%, #e0e3e6));
 @bgcolorBody: if(isdefined(@darkmode), #0F1A3A, #F9FCFF);
-@bgcolorQuota: if(isdefined(@darkmode), linear-gradient(1deg, #101c3e, #0e1734), linear-gradient(1deg, #d5d4d0, #fefbf7));
+@bgcolorQuota: if(isdefined(@darkmode), linear-gradient(1deg, #101c3e, #0e1734), linear-gradient(12deg, #ededfc, #efeffb 45%, #f7f6ff));
 @bgcolorCode: linear-gradient(225deg, #101c3e, #0e1734);
 @bgcolorTable: if(isdefined(@darkmode), linear-gradient(225deg, #0e2b41, #11334d), linear-gradient(315deg, #d8d3e2, #fffaff));
 @bgcolorSelect: if(isdefined(@darkmode), #1A3B68, #EEE6CF);
@@ -173,7 +173,7 @@
 @bcshadowBaseD: 10px 10px 20px #1a1628, -10px -10px 20px #1c172f;
 @bcshadowBase: if(isdefined(@darkmode), @bcshadowBaseD, @bcshadowBaseL);
 
-@shadowQuotaL: -5px 5px 10px #bebcb9, 5px -5px 10px #ffffff;
+@shadowQuotaL: -5px 5px 10px #e6e6e6, 5px -5px 10px #f0f0f0;
 @shadowQuotaD: -5px 5px 10px #0a1024, 5px -5px 10px #121e44;
 @shadowQuota: if(isdefined(@darkmode), @shadowQuotaD, @shadowQuotaL);
 @shadowhoverQuotaL: inset -5px 5px 10px #c2c2c2, inset 5px -5px 10px #ffffff;
@@ -479,6 +479,28 @@ body {
             font-size: 1.25rem;
         }
 
+        h6 {
+            position: relative;
+            padding-left: 2rem;
+
+            &::before {
+                position: absolute;
+                top: 8px;
+                left: .5rem;
+                color: @bgcolorBody;
+                background: @colorText;
+                content: '\36';
+                border-radius: 15px;
+                width: 20px;
+                height: 20px;
+                padding: 1px;
+                text-align: center;
+                line-height: 1;
+                display: inline-block;
+                font-family: 'FontAwesome';
+            }
+        }
+
         h1 {
             counter-reset: cnt_h2 0 cnt_h3 0 cnt_h4 0 cnt_h5 0;
         }
@@ -641,10 +663,6 @@ body {
             .CodeMirror-code {
                 line-height: 1.25;
             }
-
-            div.CodeMirror-cursor {
-                border-width: 2px;
-            }
         }
 
         pre.md-meta-block {
@@ -775,6 +793,14 @@ body {
                 box-shadow: -5px 5px 10px #5079fb, 5px -5px 10px #ccd9ff;
             }
 
+            h6{
+                &::before{
+                    content: "\f1d8";
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
             blockquote {
                 border-left: 4px solid orange;
                 background: transparent;
@@ -850,7 +876,22 @@ body {
             }
         }
 
-        figcaption {
+        // 快速生成可以调节照片大小的代码
+        each(range(0, 100, 5), {
+                img[alt~="@{value}"] {
+                    width:(@value / 100 * 100%);
+                    height: (@value / 100 * 100%);
+                }
+            }
+
+        ) each(range(0, 100, 5), {
+                img[title~="@{value}"] {
+                    width:(@value / 100 * 100%);
+                    height: (@value / 100 * 100%);
+                }
+            }
+
+        ) figcaption {
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -1463,11 +1504,6 @@ pre.md-fences {
         color: #7575E4;
     }
 
-    .CodeMirror div.CodeMirror-cursor {
-        border-left: 1px solid #b8bfc6;
-        z-index: 3;
-    }
-
     .cm-s-inner .cm-string {
         color: #D26B6B;
     }
@@ -1684,5 +1720,73 @@ pre.md-fences {
 #ty-suppress-mode-warning-input {
     &::before {
         display: none;
+    }
+}
+
+// special style
+
+#cursor {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    background: indigo;
+    border-radius: 8px;
+    opacity: 0.5;
+    scale: 1.5;
+    z-index: 10086;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    transition-property: background, opacity, transform;
+}
+
+#cursor.hidden {
+    opacity: 0;
+}
+
+#cursor.hover {
+    opacity: 0.25;
+    transform: scale(2.5);
+}
+
+#cursor.active {
+    opacity: 0.8;
+    transform: scale(0.5);
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 2px solid @colorLink;
+}
+
+var {
+    padding: 6px 20px;
+    position: relative;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #25c33b;
+    background: linear-gradient(230deg, #ffaa0d, #deb455);
+    text-shadow: 0 -1px #c1c0d4;
+    -webkit-box-shadow: 0 3px 5px #d3d2de;
+    box-shadow: 1 3px 5px #d5d4de;
+    font-style: normal;
+
+    &::before {
+        border-radius: 50%;
+        color: #fff;
+        font-size: 12px;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        line-height: 24.5px;
+        left: -12px;
+        top: -12px;
+        -webkit-box-shadow: 0 0 0 2.5px #f7f8f9;
+        box-shadow: 0 0 0 2.5px #f7f8f9;
+        font-weight: 600;
+        font-family: "FontAwesome";
+        text-align: center;
+        background: linear-gradient(560deg, #f9ae07, #ffb615);
+        content: "\f0f3";
+        text-shadow: 0 -1px #ffb81b;
     }
 }
