@@ -169,6 +169,7 @@ body #write h6 {
 body #write h1 {
   text-align: center;
   font-size: 2.25rem;
+  text-transform: capitalize;
 }
 body #write h2 {
   position: relative;
@@ -378,6 +379,7 @@ body #write em {
 body #write u {
   text-decoration: none;
   position: relative;
+  z-index: 0;
 }
 body #write u::after {
   content: '';
@@ -1435,6 +1437,22 @@ pre.md-fences .CodeMirror-gutters {
     padding-left: 0;
   }
 }
+@-webkit-keyframes text_shine {
+  0% {
+    background-position: 50% 0;
+  }
+  to {
+    background-position: -190% 0;
+  }
+}
+@keyframes text_shine {
+  0% {
+    background-position: 50% 0;
+  }
+  to {
+    background-position: -190% 0;
+  }
+}
 @keyframes circledown {
   0% {
     border-radius: 15px;
@@ -1454,6 +1472,17 @@ pre.md-fences .CodeMirror-gutters {
   100% {
     border-radius: 15px;
     height: 8px;
+  }
+}
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 5vw #FA1C16, 0 0 5vw #FA1C16, 0 0 0.4vw #FED128, 0.5vw 0.5vw 0.1vw #806914;
+    color: #FFFC00;
+  }
+  50% {
+    text-shadow: 0 0 0.5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 2.5vw #800E0B, 0 0 2.5vw #800E0B, 0 0 0.2vw #800E0B, 0.5vw 0.5vw 0.1vw #40340A;
+    color: #806914;
   }
 }
 #ty-suppress-mode-warning-input::before {
