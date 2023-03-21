@@ -817,8 +817,8 @@ body #write .task-list-item input + p {
   padding-right: 5px;
 }
 body #write .task-list-item input + p:hover {
-  background: var(--select-text-bg-color);
-  color: var(--select-text-font-color);
+  background: #ffa50f;
+  color: #3c286e;
   transition: all 0.5s ease-in-out;
 }
 body #write .task-list-item input[type="checkbox"]::before {

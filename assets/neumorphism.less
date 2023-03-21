@@ -1,6 +1,6 @@
 //注释下方代码将生成亮色主题。
 
-@darkmode: ;
+@darkmode: TRUE;
 
 :root {
     --text-color: @colorText;
@@ -241,7 +241,6 @@
 @bgcolorSelectText: if(isdefined(@darkmode), #FAE1A7, #084E6A);
 @colorSelectText: if(isdefined(@darkmode), #4D85DB, #FCF1E5);
 @bgcolorTOC: if(isdefined(@darkmode), #FFA644, #FFF6E5);
-
 
 @bgcolorTodoL: linear-gradient(145deg, #cacaca, #f0f0f0);
 @bgcolorTodoD: linear-gradient(145deg, #14293d, #051423);
@@ -953,8 +952,8 @@ body {
                 padding-right: 5px;
 
                 &:hover {
-                    background: var(--select-text-bg-color);
-                    color: var(--select-text-font-color);
+                    background: rgb(255, 165, 15);
+                    color: #3c286e;
                     transition: all .5s ease-in-out;
                 }
             }
