@@ -19,7 +19,7 @@ description: this block is YAML front matters
 
 ## 修改鼠标样式
 
-本技巧来源于[用原生 JS 写一款乖巧的鼠标指针特效](https://zhuanlan.zhihu.com/p/351951477)。
+本技巧来源于 [用原生 JS 写一款乖巧的鼠标指针特效](https://zhuanlan.zhihu.com/p/351951477)。
 
 具体操作需要修改程序本体，在程序升级之后，需要重新进行设计。
 
@@ -36,20 +36,20 @@ description: this block is YAML front matters
 
     <center><var>方法： <code>![照片名称 数字](照片地址 "数字")</code> </var></center> 
 
-    <center><var>例如：调整为50%大小<code>![照片名称 50](照片地址 "50")</code> </var></center> 
+    <center><var>例如：调整为 50%大小<code>![照片名称 50](照片地址 "50")</code> </var></center> 
 
-    > 注意：默认设定的缩放大小以5为步值，即：0，5，10，15……
+    > 注意：默认设定的缩放大小以 5 为步值，即：0，5，10，15……
 
 1. 需要注意的是无法调整照片为行内元素。
 
 ## HTML 元素引入
 
 1. 可以通过 `<var> </var>`元素来引入下面的样式：
-   - <var> 该元素的本来语义是定义变量。</var> 
+   - <var> 该元素的本来语义是定义变量。</var>
 
+## 目前已知问题
 
-
-
+1. [【issue 5】](https://github.com/Soanguy/Typora-Theme-Neumorphism/issues/5) 在导出为 HTML 文件时，四级标题中如果含有符号的话，将不能如期的显示动画。
 
 # 排版示例
 
@@ -62,8 +62,6 @@ A common form of *lorem ipsum* reads:
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ----
-
-
 
 Inline styles support **strong**, *Emphasis*, `code`, <u>underline</u>, ~~strikethrough~~, :haha:, $\LaTeX$, X^2^, H~2~O, ==highlight==, [Link](typora.io), and image:
 
