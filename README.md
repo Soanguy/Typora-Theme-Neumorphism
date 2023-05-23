@@ -28,6 +28,7 @@ description: this block is YAML front matters
    - 粘贴到 typora 的 `index.html` 文件代码中`</body>`之前（可以直接检索）
      - 在 macOS 中，该文件位于 `/Applications/Typora.app/Contents/Resources/TypeMark/index.html`
      - 在 Windows 中，该文件位于`C:\Program Files\Typora\resources\window.html`
+     - 在 Deepin 中的位置可以参考：[issue 8](https://github.com/Soanguy/Typora-Theme-Neumorphism/issues/8)
 1. 重启软件即可
 
 ## 图片的技巧
@@ -49,7 +50,9 @@ description: this block is YAML front matters
 
 ## 目前已知问题
 
-1. [【issue 5】](https://github.com/Soanguy/Typora-Theme-Neumorphism/issues/5) 在导出为 HTML 文件时，四级标题中如果含有符号的话，将不能如期的显示动画。
+1. [【issue 5】](https://github.com/Soanguy/Typora-Theme-Neumorphism/issues/5) 在导出为 HTML 文件时，四级标题中如果含有符号的话，将不能如期的显示动画：建议忽视该 bug 或者尽可能少使用符号。
+1. [【issue 7】](https://github.com/Soanguy/Typora-Theme-Neumorphism/issues/7) 打印时，代码框背景阴影可能出现异常，现已移除打印时的背景阴影。
+1. [【issue 6】](https://github.com/Soanguy/Typora-Theme-Neumorphism/issues/6) 本问题有概率出现：多个文件打开后，状态栏的闪跳。
 
 # 排版示例
 

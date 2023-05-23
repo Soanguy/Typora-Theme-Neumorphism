@@ -455,6 +455,11 @@ body #write pre.md-fences:hover {
 body #write pre.md-fences .CodeMirror-code {
   line-height: 1.25;
 }
+@media print {
+  body #write pre.md-fences {
+    box-shadow: none !important;
+  }
+}
 body #write pre.md-meta-block {
   padding: 4px 12px;
 }

@@ -1,6 +1,6 @@
 //注释下方代码将生成亮色主题。
 
-@darkmode: TRUE;
+// @darkmode: TRUE;
 
 :root {
     --text-color: @colorText;
@@ -696,6 +696,9 @@ body {
 
             .CodeMirror-code {
                 line-height: 1.25;
+            }
+            @media print{
+                box-shadow: none !important;
             }
         }
 
